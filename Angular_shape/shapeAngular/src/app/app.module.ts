@@ -14,6 +14,10 @@ import { AddMensurationComponent } from './components/admin/mensuration/add-mens
 import { ListMensurationComponent } from './components/admin/mensuration/list-mensuration/list-mensuration.component';
 import { EditMensurationComponent } from './components/admin/mensuration/edit-mensuration/edit-mensuration.component';
 import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.component';
+import { ExerciceComponent } from './components/admin/exercice/exercice/exercice.component';
+import { AddExerciceComponent } from './components/admin/exercice/add-exercice/add-exercice.component';
+import { ListExerciceComponent } from './components/admin/exercice/list-exercice/list-exercice.component';
+import { EditExerciceComponent } from './components/admin/exercice/edit-exercice/edit-exercice.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { MenuAdminComponent } from './components/admin/menu-admin/menu-admin.com
     AddMensurationComponent,
     ListMensurationComponent,
     EditMensurationComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    ExerciceComponent,
+    AddExerciceComponent,
+    ListExerciceComponent,
+    EditExerciceComponent
   ],
   imports: [
     BrowserModule,

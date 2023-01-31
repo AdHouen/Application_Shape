@@ -1,0 +1,32 @@
+<br>
+<H1 class="text-center">Liste des Exercices</H1>
+<a routerLink="/addExercice" class="btn btn-success waves-effect waves-light btn right orange">Ajouter un nouveau chat</a>
+<br>
+<br>
+<table id="table_id" class="table ">
+    <thead>
+        <tr>
+          <th scope="col">exercice_id</th>
+          <th scope="col">exercice_nom</th>
+          <th scope="col">exercice_description</th>
+          <th scope="col">exercice_photo</th>
+          <th scope="col">muscle_id</th>
+          <th scope="col">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of exercices">
+        <th scope="row"> {{item.exercice_id}}</th>
+        <td>{{item.exercice_nom}}</td>
+        <td>{{item.exercice_description}}</td>
+        <td>{{item.exercice_photo}}</td>
+        <td>{{item.muscle_id}}</td>
+
+        <td><a  routerLink='/editExercice/{{item.exercice_id}}' class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</a>
+        </td>
+        <td><a routerLink='/exercice/{{item.exercice_id}}'
+                class="btn btn-danger waves-effect waves-light btn right #e65100 green">Delete</a></td>
+    </tr>
+</tbody>
+
+</table>

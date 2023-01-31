@@ -1,3 +1,7 @@
+import { EditExerciceComponent } from './components/admin/exercice/edit-exercice/edit-exercice.component';
+import { ListExerciceComponent } from './components/admin/exercice/list-exercice/list-exercice.component';
+import { AddExerciceComponent } from './components/admin/exercice/add-exercice/add-exercice.component';
+import { ExerciceComponent } from './components/admin/exercice/exercice/exercice.component';
 import { EditMensurationComponent } from './components/admin/mensuration/edit-mensuration/edit-mensuration.component';
 import { ListMensurationComponent } from './components/admin/mensuration/list-mensuration/list-mensuration.component';
 import { AddMensurationComponent } from './components/admin/mensuration/add-mensuration/add-mensuration.component';
@@ -10,6 +14,43 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddMuscleComponent } from './components/admin/muscle/add-muscle/add-muscle/add-muscle.component';
 
 const routes: Routes = [
+  // DEBUT - ABONNEMENT
+  {
+    path: 'abonnement',
+    component : MensurationComponent
+  },
+  {
+    path: 'addAbonnement',
+    component : AddMensurationComponent
+  },
+  {
+    path: 'abonnement/:id',
+    component : ListMensurationComponent
+  },
+  {
+    path: 'editAbonnement/:id',
+    component : EditMensurationComponent
+  },
+  // FIN - ABONNEMENT
+
+   // DEBUT - EXERCICE
+   {
+    path: 'exercice',
+    component : ExerciceComponent
+  },
+  {
+    path: 'addExercice',
+    component : AddExerciceComponent
+  },
+  {
+    path: 'exercice/:id',
+    component : ListExerciceComponent
+  },
+  {
+    path: 'editExercice/:id',
+    component : EditExerciceComponent
+  },
+  // FIN - EXERCICE
 
   // DEBUT - MENSURATION
   {
