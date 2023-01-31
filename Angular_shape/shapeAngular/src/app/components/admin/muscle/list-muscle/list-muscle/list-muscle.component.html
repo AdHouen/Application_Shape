@@ -1,0 +1,35 @@
+<br>
+<H1 class="text-center">Liste des Muscles</H1>
+<a routerLink="/addMuscle" class="btn btn-success waves-effect waves-light btn right orange">Ajouter un nouveau chat</a>
+<br>
+<br>
+<table id="table_id" class="table ">
+    <thead>
+        <tr>
+          <th scope="col">muscle_id</th>
+          <th scope="col">muscle_nom</th>
+          <th scope="col">muscle_image</th>
+          <th scope="col">utilisateur_id</th>
+          <th scope="col">listMensuration</th>
+          <th scope="col">listExercice</th>
+          <th scope="col">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of muscles">
+        <th scope="row"> {{item.muscle_id}}</th>
+        <td>{{item.muscle_nom}}</td>
+        <td>{{item.muscle_image}}</td>
+        <td>{{item.utilisateur_id}}</td>
+        <td>{{item.listMensuration}}</td>
+        <td>{{item.listExercice}}</td>
+
+        <td><a  routerLink='/editMuscle/{{item.muscle_id}}' class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</a>
+        </td>
+        <td><a routerLink='/muscle/{{item.muscle_id}}'
+                class="btn btn-danger waves-effect waves-light btn right #e65100 green">Delete</a></td>
+    </tr>
+</tbody>
+
+</table>
+

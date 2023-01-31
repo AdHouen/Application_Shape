@@ -1,0 +1,30 @@
+<br>
+<br>
+<H2 class="text-center">Modifier un chat</H2>
+<div class="container border">
+    <form  [formGroup]="editForm" (ngSubmit)="update()">
+        <div class="form-group">
+          <div class="input-field col s16">
+            <label for="id">muscle_id</label>
+            <input type="text" name="" class="form-control" id="muscle_id" formControlName="muscle_id" data-length="10">
+          </div>
+          <div class="input-field col s16">
+           <label for="idUser">muscle_nom</label>
+            <input type="text" name="" id="muscle_nom" class="form-control" formControlName="muscle_nom" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="idUser">muscle_image</label>
+            <input type="text" name="" id="muscle_image" class="form-control" formControlName="muscle_image" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">utilisateur_id</label>
+            <input type="text" name="" id="utilisateur_id"  class="form-control" formControlName="utilisateur_id" data-length="10000">
+          </div>
+
+          </div>
+          <button class="btn btn-success" type="submit">Soumettre</button>
+    </form>
+    <br>
+</div>
+{{editForm.value | json}}
+
