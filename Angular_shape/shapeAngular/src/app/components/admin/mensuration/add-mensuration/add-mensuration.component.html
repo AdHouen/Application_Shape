@@ -1,0 +1,29 @@
+<br>
+<br>
+<H2 class="text-center">Modifier un chat</H2>
+<div class="container border">
+    <form  [formGroup]="form" (ngSubmit)="create()">
+        <div class="form-group">
+          <div class="input-field col s16">
+            <label for="id">mensuration_id</label>
+            <input type="text" name="" class="form-control" id="mensuration_id" formControlName="mensuration_id" data-length="10">
+          </div>
+          <div class="input-field col s16">
+           <label for="idUser">mensuration_date</label>
+            <input type="text" name="" id="mensuration_date" class="form-control" formControlName="mensuration_date" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="idUser">mensuration_valeur</label>
+            <input type="text" name="" id="mensuration_valeur" class="form-control" formControlName="mensuration_valeur" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">muscle_id</label>
+            <input type="text" name="" id="muscle_id"  class="form-control" formControlName="muscle_id" data-length="10000">
+          </div>
+
+          </div>
+          <button class="btn btn-success" type="submit">Soumettre</button>
+    </form>
+    <br>
+</div>
+{{form.value | json}}

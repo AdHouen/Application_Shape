@@ -46,7 +46,7 @@ export class MuscleComponent implements OnInit {
   deleteMuscle(id : number){
     return this.muscleService.deleteMuscle(id).subscribe(
       () => {
-        
+
       }
     )
   }
