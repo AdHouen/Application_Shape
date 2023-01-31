@@ -27,6 +27,7 @@ export class AddExerciceComponent implements OnInit{
 	    exercice_description: ['', Validators.required],
 	    exercice_photo: ['', Validators.required],
 	    muscle_id: ['', Validators.required],
+      listEntrainement: [[], Validators.required],
 
     })
   }

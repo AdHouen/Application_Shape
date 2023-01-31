@@ -14,24 +14,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddMuscleComponent } from './components/admin/muscle/add-muscle/add-muscle/add-muscle.component';
 
 const routes: Routes = [
-  // DEBUT - ABONNEMENT
-  {
-    path: 'abonnement',
-    component : MensurationComponent
-  },
-  {
-    path: 'addAbonnement',
-    component : AddMensurationComponent
-  },
-  {
-    path: 'abonnement/:id',
-    component : ListMensurationComponent
-  },
-  {
-    path: 'editAbonnement/:id',
-    component : EditMensurationComponent
-  },
-  // FIN - ABONNEMENT
 
    // DEBUT - EXERCICE
    {

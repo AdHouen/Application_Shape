@@ -31,6 +31,7 @@ export class EditExerciceComponent implements OnInit {
 	    exercice_description: ['', Validators.required],
 	    exercice_photo: ['', Validators.required],
 	    muscle_id: ['', Validators.required],
+      listEntrainement: [[]],
 
     })
     const id = Number(this.route.snapshot.paramMap.get('id'));
