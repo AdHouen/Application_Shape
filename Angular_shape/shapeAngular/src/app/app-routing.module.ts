@@ -1,3 +1,6 @@
+import { ListEntrainementComponent } from './components/admin/entrainement/list-entrainement/list-entrainement.component';
+import { AddEntrainementComponent } from './components/admin/entrainement/add-entrainement/add-entrainement.component';
+import { EntrainementComponent } from './components/admin/entrainement/entrainement/entrainement.component';
 import { EditExerciceComponent } from './components/admin/exercice/edit-exercice/edit-exercice.component';
 import { ListExerciceComponent } from './components/admin/exercice/list-exercice/list-exercice.component';
 import { AddExerciceComponent } from './components/admin/exercice/add-exercice/add-exercice.component';
@@ -12,8 +15,27 @@ import { MuscleComponent } from './components/admin/muscle/muscle/muscle.compone
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddMuscleComponent } from './components/admin/muscle/add-muscle/add-muscle/add-muscle.component';
+import { EditEntrainementComponent } from './components/admin/entrainement/edit-entrainement/edit-entrainement.component';
 
 const routes: Routes = [
+   // DEBUT - EXERCICE
+   {
+    path:'entrainement',
+    component: EntrainementComponent
+   },
+   {
+    path:'addEntrainement',
+    component: AddEntrainementComponent
+   },
+   {
+    path:'entrainement/:id',
+    component: ListEntrainementComponent
+   },
+   {
+    path:'editEntrainement/:id',
+    component: EditEntrainementComponent
+   },
+   // FIN - ENTRAINEMENT
 
    // DEBUT - EXERCICE
    {

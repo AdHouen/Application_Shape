@@ -18,6 +18,10 @@ import { ExerciceComponent } from './components/admin/exercice/exercice/exercice
 import { AddExerciceComponent } from './components/admin/exercice/add-exercice/add-exercice.component';
 import { ListExerciceComponent } from './components/admin/exercice/list-exercice/list-exercice.component';
 import { EditExerciceComponent } from './components/admin/exercice/edit-exercice/edit-exercice.component';
+import { EntrainementComponent } from './components/admin/entrainement/entrainement/entrainement.component';
+import { AddEntrainementComponent } from './components/admin/entrainement/add-entrainement/add-entrainement.component';
+import { ListEntrainementComponent } from './components/admin/entrainement/list-entrainement/list-entrainement.component';
+import { EditEntrainementComponent } from './components/admin/entrainement/edit-entrainement/edit-entrainement.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { EditExerciceComponent } from './components/admin/exercice/edit-exercice
     ExerciceComponent,
     AddExerciceComponent,
     ListExerciceComponent,
-    EditExerciceComponent
+    EditExerciceComponent,
+    EntrainementComponent,
+    AddEntrainementComponent,
+    ListEntrainementComponent,
+    EditEntrainementComponent
   ],
   imports: [
     BrowserModule,
