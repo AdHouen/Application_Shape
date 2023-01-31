@@ -28,13 +28,15 @@ export class ListMuscleComponent implements OnInit{
     );
     if (this.route.snapshot.paramMap.get('id') != null) {
       this.remove();
+      this.router.navigate(['/muscle'])
     }
   }
   remove() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.muscleService.deleteMuscle(id).subscribe(
       () => {
-        
+
+
       }
     )
   }
