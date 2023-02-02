@@ -27,6 +27,7 @@ import { ListPlanningComponent } from './components/user/planning/list-planning/
 import { EditPlanningComponent } from './components/user/planning/edit-planning/edit-planning.component';
 import { AddPlanningComponent } from './components/user/planning/add-planning/add-planning.component';
 import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
+import { ListGallerieComponent } from './components/user/gallerie/list-gallerie/list-gallerie/list-gallerie.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { UploadFileComponent } from './components/user/upload-file/upload-file.c
     ListPlanningComponent,
     EditPlanningComponent,
     AddPlanningComponent,
-    UploadFileComponent
+    UploadFileComponent,
+    ListGallerieComponent,
   ],
   imports: [
     BrowserModule,

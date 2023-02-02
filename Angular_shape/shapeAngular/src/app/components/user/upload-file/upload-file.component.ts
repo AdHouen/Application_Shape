@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadFileComponent implements OnInit{
 
-  file!: File;
+  file!: File ;
   fileDetails!: any;
   fileUris: Array<string> = [];
   declare form : FormGroup;
@@ -29,7 +29,7 @@ export class UploadFileComponent implements OnInit{
 	    gallerie_filename:  ['', Validators.required],
 	    data :  [[], Validators.required],
 	    gallerie_date:  ['2023-02-02', Validators.required],
-	    utilisateur_id :  ['1', Validators.required],
+	    utilisateur_id :  ['2', Validators.required],
 
     })
 
