@@ -1,3 +1,4 @@
+import { MuscleService } from './../../../../services/muscle/muscle.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MensurationService } from './../../../../services/mensuration/mensuration.service';
 import { Component, OnInit } from '@angular/core';

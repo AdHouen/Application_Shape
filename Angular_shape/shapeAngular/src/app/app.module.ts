@@ -22,6 +22,11 @@ import { EntrainementComponent } from './components/admin/entrainement/entrainem
 import { AddEntrainementComponent } from './components/admin/entrainement/add-entrainement/add-entrainement.component';
 import { ListEntrainementComponent } from './components/admin/entrainement/list-entrainement/list-entrainement.component';
 import { EditEntrainementComponent } from './components/admin/entrainement/edit-entrainement/edit-entrainement.component';
+import { PlanningComponent } from './components/user/planning/planning/planning.component';
+import { ListPlanningComponent } from './components/user/planning/list-planning/list-planning.component';
+import { EditPlanningComponent } from './components/user/planning/edit-planning/edit-planning.component';
+import { AddPlanningComponent } from './components/user/planning/add-planning/add-planning.component';
+import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,12 @@ import { EditEntrainementComponent } from './components/admin/entrainement/edit-
     EntrainementComponent,
     AddEntrainementComponent,
     ListEntrainementComponent,
-    EditEntrainementComponent
+    EditEntrainementComponent,
+    PlanningComponent,
+    ListPlanningComponent,
+    EditPlanningComponent,
+    AddPlanningComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,

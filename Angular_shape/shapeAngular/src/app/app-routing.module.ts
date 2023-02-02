@@ -1,3 +1,5 @@
+import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
+import { PlanningComponent } from './components/user/planning/planning/planning.component';
 import { ListEntrainementComponent } from './components/admin/entrainement/list-entrainement/list-entrainement.component';
 import { AddEntrainementComponent } from './components/admin/entrainement/add-entrainement/add-entrainement.component';
 import { EntrainementComponent } from './components/admin/entrainement/entrainement/entrainement.component';
@@ -93,6 +95,19 @@ const routes: Routes = [
     component : EditMuscleComponent
   },
   // FIN - MUSCLE
+
+  // PLANNING
+  {
+    path : 'planning',
+    component: PlanningComponent
+  },
+
+  // GALLERIE
+  {
+    path: 'gallerie',
+    component:UploadFileComponent
+
+  },
 
 
 ];
