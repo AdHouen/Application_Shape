@@ -146,16 +146,27 @@
 
       </tr> -->
       <tr>
-        <td *ngFor="let item of muscles" > {{item.muscle_nom}}
-          
-        </td>
+        <td *ngFor="let item of muscles" >{{item.muscle_nom}}</td>
+
         <td *ngFor="let item of exercices" > {{item.exercice_nom}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_serie}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_repetition}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_poids}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_pause}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_tempsSeconde}}</td>
+
         <td *ngFor="let item of entrainements">{{item.entrainement_distance}}</td>
+
+
+
+
+
+
       </tr>
         <!-- <td><a  routerLink='/editMuscle/{{item.muscle_id}}' class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</a>
         </td>
