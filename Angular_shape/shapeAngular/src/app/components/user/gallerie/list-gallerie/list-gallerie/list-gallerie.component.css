@@ -1,7 +1,10 @@
+/*/////////////////// GALLERIE ////////////////////////////////////*/
+
 div.gallery {
-  height: 100%;
-  margin: 1rem 1rem;
+  margin: 0rem 0.1rem;
+
   border: 1px solid #ccc;
+  text-align: center;
 }
 
 div.gallery:hover {
@@ -9,14 +12,19 @@ div.gallery:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+div.gallery .image {
+  height: 12rem;
+  width: 100%;
+  margin: auto;
+}
+
 div.gallery img {
-  max-width : 100%;
-  margin: 1rem 1rem;
-  height: auto;
-  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 div.desc {
+  padding: 20px;
   text-align: center;
 }
 
@@ -25,9 +33,9 @@ div.desc {
 }
 
 .responsive {
-  padding: 0 0.1rem 0.1rem ;
+  padding: 0 1rem 1rem ;
   float: left;
-  width: 24.99999%;
+  width: 25%;
 
 }
 
@@ -36,6 +44,34 @@ div.desc {
   display: table;
   clear: both;
 }
+
+
+/*///////////////////FIN GALLERY ////////////////////////////////////*/
+
+
+
+@media only screen and (max-width: 960px) {
+.responsive {
+  width: 33%;
+
+}
+
+}
+@media only screen and (max-width: 640px) {
+  .responsive {
+    width: 50%;
+
+  }
+
+  }@media only screen and (max-width: 480px) {
+.responsive {
+  width: 100%;
+  margin: auto;
+}
+
+}
+
+
 
 
 

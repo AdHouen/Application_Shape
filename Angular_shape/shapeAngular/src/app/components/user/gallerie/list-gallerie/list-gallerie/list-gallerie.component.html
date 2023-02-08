@@ -16,7 +16,10 @@
     <tbody>
       <div class="responsive " *ngFor="let g of gallerie " >
         <div class="gallery  "  *ngIf="g.utilisateur_id == 1"  >
-            <img class=img-responsive   src="http://localhost:8087/image/{{g.gallerie_filename}}" style="height: 9rem;">
+          <div class="image">
+            <img class=img-responsive   src="http://localhost:8087/image/{{g.gallerie_filename}}" >
+          </div>
+
           <div class="desc">{{g.gallerie_date}} </div>
         </div>
       </div>

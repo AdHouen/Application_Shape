@@ -1,3 +1,4 @@
+import { Muscle } from './../../../../models/muscle/muscle';
 import { MuscleService } from './../../../../services/muscle/muscle.service';
 import { MensurationService } from './../../../../services/mensuration/mensuration.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,11 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensurationComponent implements OnInit{
   declare mensurations : any[];
+
   declare form : FormGroup;
 
   constructor(
 
     private mensurationService : MensurationService,
+
     private router : Router,
     private formBuilder : FormBuilder
 
@@ -30,8 +33,11 @@ ngOnInit(): void {
 	  mensuration_valeur: ['', Validators.required],
 	  muscle_id: ['', Validators.required],
 
+
   })
   this.getMensurations();
+
+
 }
   getMensurations() {
     return this.mensurationService.findAllMensurations().subscribe(
