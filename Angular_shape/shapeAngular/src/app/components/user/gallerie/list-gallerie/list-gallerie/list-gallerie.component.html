@@ -1,18 +1,29 @@
-<ng-container >
-  <tr *ngFor="let g of gallerie ">
+<!-- <ng-container>
+  <td *ngFor="let g of gallerie ">
       <ng-container *ngIf="g.utilisateur_id == 1" >
-        <img src="http://localhost:8087/image/{{g.gallerie_filename}}" alt="">
+        {{g.gallerie_date}}
 
-
+        <img src="http://localhost:8087/image/{{g.gallerie_filename}}"  class="img-fluid" style="width: 50px;"alt="">
       </ng-container >
+  </td>
+</ng-container> -->
+
+
+
+<h1>Gallerie Photo</h1>
+<br>
+<table id="table_id" class="table " >
+    <tbody>
+      <div class="responsive " *ngFor="let g of gallerie " >
+        <div class="gallery  "  *ngIf="g.utilisateur_id == 1"  >
+            <img class=img-responsive   src="http://localhost:8087/image/{{g.gallerie_filename}}" style="height: 9rem;">
+          <div class="desc">{{g.gallerie_date}} </div>
+        </div>
+      </div>
+
+</tbody>
 
 
 
 
-  </tr>
 
-
-
-
-
-</ng-container>

@@ -35,11 +35,15 @@ export class ListGallerieComponent implements OnInit{
   getGalleries() {
     return this.gallerieService.findAllGalleries().subscribe(
       (data=>{
+
         this.gallerie = data as any [];
+
+
       }
         )
 
     )
   }
+  
 
 }

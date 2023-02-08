@@ -1,0 +1,43 @@
+div.gallery {
+  height: 100%;
+  margin: 1rem 1rem;
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery img {
+  max-width : 100%;
+  margin: 1rem 1rem;
+  height: auto;
+  display: block;
+}
+
+div.desc {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 0.1rem 0.1rem ;
+  float: left;
+  width: 24.99999%;
+
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+

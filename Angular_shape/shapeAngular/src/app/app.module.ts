@@ -29,6 +29,7 @@ import { AddPlanningComponent } from './components/user/planning/add-planning/ad
 import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
 import { ListGallerieComponent } from './components/user/gallerie/list-gallerie/list-gallerie/list-gallerie.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

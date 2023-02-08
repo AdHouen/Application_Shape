@@ -1,6 +1,7 @@
 package com.shape.shape.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -26,7 +27,7 @@ public class Gallerie implements Serializable {
 	@Column(name = "data")
 	private byte[] data;
 	@Column(name = "GALLERIE_DATE")
-	private Date gallerie_date;
+	private LocalDate gallerie_date;
 	@Column(name = "UTILISATEUR_ID")
 	private Long utilisateur_id;
 	
@@ -43,7 +44,7 @@ public class Gallerie implements Serializable {
 		return data;
 	}
 
-	public Date getGallerie_date() { 
+	public LocalDate getGallerie_date() { 
 		return gallerie_date;
 	}
 
@@ -65,7 +66,7 @@ public class Gallerie implements Serializable {
 		this.data = data;
 	}
 
-	public void setGallerie_date(Date gallerie_date) {
+	public void setGallerie_date(LocalDate gallerie_date) {
 		this.gallerie_date = gallerie_date;
 	}
 
@@ -80,7 +81,7 @@ public class Gallerie implements Serializable {
 		super();
 	}
 
-	public Gallerie(Long gallerie_id, String gallerie_filename, byte[] data, Date gallerie_date, Long utilisateur_id) {
+	public Gallerie(Long gallerie_id, String gallerie_filename, byte[] data, LocalDate gallerie_date, Long utilisateur_id) {
 		super();
 		this.gallerie_id = gallerie_id;
 		this.gallerie_filename = gallerie_filename;
