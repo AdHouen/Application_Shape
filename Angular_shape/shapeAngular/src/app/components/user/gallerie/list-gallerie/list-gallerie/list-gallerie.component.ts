@@ -37,6 +37,7 @@ export class ListGallerieComponent implements OnInit{
       (data=>{
 
         this.gallerie = data as any [];
+        
 
 
       }
@@ -44,6 +45,6 @@ export class ListGallerieComponent implements OnInit{
 
     )
   }
-  
+
 
 }

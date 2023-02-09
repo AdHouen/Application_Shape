@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MuscleComponent } from './components/admin/muscle/muscle/muscle.component';
@@ -28,6 +27,15 @@ import { EditPlanningComponent } from './components/user/planning/edit-planning/
 import { AddPlanningComponent } from './components/user/planning/add-planning/add-planning.component';
 import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
 import { ListGallerieComponent } from './components/user/gallerie/list-gallerie/list-gallerie/list-gallerie.component';
+import { AccueilComponent } from './components/user/accueil/accueil.component';
+import { CalculBmiComponent } from './components/user/calcul-bmi/calcul-bmi/calcul-bmi.component';
+import { ListExerciceIdeeComponent } from './components/user/exerciceIdee/list-exercice-idee/list-exercice-idee.component';
+import { ExerciceIdeeComponent } from './components/user/exerciceIdee/exercice-idee/exercice-idee.component';
+import { ContactComponent } from './components/user/contact/contact/contact.component';
+import { MensurationDataComponent } from './components/user/mensuration-data/mensuration-data/mensuration-data.component';
+import { ListMensurationDataComponent } from './components/user/mensuration-data/list-mensuration-data/list-mensuration-data.component';
+import { EditMensurationDataComponent } from './components/user/mensuration-data/edit-mensuration-data/edit-mensuration-data.component';
+import { AddMensurationDataComponent } from './components/user/mensuration-data/add-mensuration-data/add-mensuration-data.component';
 
 
 @NgModule({
@@ -56,13 +64,22 @@ import { ListGallerieComponent } from './components/user/gallerie/list-gallerie/
     AddPlanningComponent,
     UploadFileComponent,
     ListGallerieComponent,
+    AccueilComponent,
+    CalculBmiComponent,
+    ListExerciceIdeeComponent,
+    ExerciceIdeeComponent,
+    ContactComponent,
+    MensurationDataComponent,
+    ListMensurationDataComponent,
+    EditMensurationDataComponent,
+    AddMensurationDataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

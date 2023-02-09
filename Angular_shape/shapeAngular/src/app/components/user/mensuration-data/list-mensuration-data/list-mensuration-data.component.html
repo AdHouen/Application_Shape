@@ -1,0 +1,90 @@
+<!-- Class Timetable Start -->
+
+<div class="container-fluid p-5">
+  <div class="mb-5 text-center">
+      <h5 class="text-primary text-uppercase">Mensuration - Data</h5>
+      <h1 class="display-3 text-uppercase mb-0">Choisis ton muscle</h1>
+  </div>
+  <div class="tab-class text-center">
+      <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
+          <li class="nav-item" *ngFor="let item of muscles">
+              <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-1" *ngIf="item.muscle_id==90">{{item.muscle_nom}}</a>
+          </li>
+          <li class="nav-item" *ngFor="let item of muscles">
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-2" *ngIf="item.muscle_id==91">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-3" *ngIf="item.muscle_id==89">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-4" *ngIf="item.muscle_id==86">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-5" *ngIf="item.muscle_id==96">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-6" *ngIf="item.muscle_id==92">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-7" *ngIf="item.muscle_id==93">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-8" *ngIf="item.muscle_id==94">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-9" *ngIf="item.muscle_id==95">{{item.muscle_nom}}</a>
+        </li>
+        <li class="nav-item" *ngFor="let item of muscles">
+          <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-10" *ngIf="item.muscle_id==99">{{item.muscle_nom}}</a>
+        </li>
+      </ul>
+  </div>
+</div>
+
+<!-- Ajouter une mensuration  -->
+
+
+
+<!-- Class Timetable Start -->
+<div class="tab-content ">
+<div id="tab-10" class="tab-pane fade p-0 ">
+  <H1 class="text-center">Mensuration pectoraux</H1>
+  <div id="ajouterMensurationData" class="container">
+    <a routerLink="/ajouterMensurationData" class="btn btn-success waves-effect waves-light btn right orange">Ajouter une nouvelle Mensuration</a>
+  </div>
+  <table id="table_id" class="table align-middle  table-striped" >
+      <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Mesure</th>
+            <th scope="col">Evolution</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Remove</th>
+
+          </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of mensurations.slice().reverse()">
+          <td *ngIf="item.muscle_id==99">{{item.mensuration_date}}</td>
+          <td *ngIf="item.muscle_id==99">{{item.mensuration_valeur}}</td>
+          <td>A voir</td>
+          <td>
+            <button type="button" class="btn btn-info btn-sm" routerLink='/editMensurationData/{{item.mensuration_id}}' ><i class="fas fa-edit"></i> Edit</button>
+          </td>
+          <td>
+            <button class="btn btn-danger btn-sm" routerLink='/mensurationData/{{item.mensuration_id}}'><i class="far fa-trash-alt"></i> Remove</button>
+
+          </td>
+
+
+      </tr>
+  </tbody>
+  </table>
+</div>
+
+
+</div>
+
+
+
+

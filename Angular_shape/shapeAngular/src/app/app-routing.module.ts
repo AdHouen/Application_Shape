@@ -1,3 +1,11 @@
+import { ListMensurationDataComponent } from './components/user/mensuration-data/list-mensuration-data/list-mensuration-data.component';
+import { AddMensurationDataComponent } from './components/user/mensuration-data/add-mensuration-data/add-mensuration-data.component';
+import { EditMensurationDataComponent } from './components/user/mensuration-data/edit-mensuration-data/edit-mensuration-data.component';
+import { MensurationDataComponent } from './components/user/mensuration-data/mensuration-data/mensuration-data.component';
+import { ContactComponent } from './components/user/contact/contact/contact.component';
+import { ExerciceIdeeComponent } from './components/user/exerciceIdee/exercice-idee/exercice-idee.component';
+import { CalculBmiComponent } from './components/user/calcul-bmi/calcul-bmi/calcul-bmi.component';
+import { AccueilComponent } from './components/user/accueil/accueil.component';
 import { UploadFileComponent } from './components/user/upload-file/upload-file.component';
 import { PlanningComponent } from './components/user/planning/planning/planning.component';
 import { ListEntrainementComponent } from './components/admin/entrainement/list-entrainement/list-entrainement.component';
@@ -108,6 +116,55 @@ const routes: Routes = [
     component:UploadFileComponent
 
   },
+
+   // ACCUEIL
+   {
+    path: 'accueil',
+    component:AccueilComponent
+
+  },
+
+   // BMI
+   {
+    path: 'bmi',
+    component:CalculBmiComponent
+
+  },
+
+   // EXERCICE IDEE
+   {
+    path: 'exerciceIdee',
+    component:ExerciceIdeeComponent
+
+  },
+   // CONTACT
+   {
+    path: 'contact',
+    component:ContactComponent
+
+  },
+
+  // MENSURATION DATA
+  {
+    path: 'mensurationData',
+    component:MensurationDataComponent
+
+  },
+  {
+    path: 'editMensurationData/:id',
+    component : EditMensurationDataComponent
+
+  },
+  {
+    path: 'ajouterMensurationData',
+    component : AddMensurationDataComponent
+  },
+  {
+    path: 'mensurationData/:id',
+    component : ListMensurationDataComponent
+  },
+
+
 
 
 ];

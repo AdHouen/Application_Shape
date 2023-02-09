@@ -28,6 +28,8 @@ public class Exercice implements Serializable{
 	private String exercice_description;
 	@Column(name = "EXERCICE_PHOTO")
 	private String exercice_photo;
+	@Column(name = "EXERCICE_POSITION")
+	private String exercice_position;
 	@Column(name = "Muscle_ID")
 	private Long muscle_id;
 
@@ -50,6 +52,9 @@ public class Exercice implements Serializable{
 	}
 	public String getExercice_photo() {
 		return exercice_photo;
+	}
+	public String getExercice_position() {
+		return exercice_position;
 	}
 	public Long getMuscle_id() {
 		return muscle_id;
@@ -74,6 +79,9 @@ public class Exercice implements Serializable{
 	public void setExercice_photo(String exercice_photo) {
 		this.exercice_photo = exercice_photo;
 	}
+	public void setExercice_position(String exercice_position) {
+		this.exercice_position = exercice_position;
+	}
 	public void setMuscle_id(Long muscle_id) {
 		this.muscle_id = muscle_id;
 	}
@@ -87,16 +95,20 @@ public class Exercice implements Serializable{
 	public Exercice() {
 		super();
 	}
+	
 	public Exercice(Long exercice_id, String exercice_nom, String exercice_description, String exercice_photo,
-			Long muscle_id, List<Entrainement> listEntrainement) {
+			String exercice_position, Long muscle_id, List<Entrainement> listEntrainement) {
 		super();
 		this.exercice_id = exercice_id;
 		this.exercice_nom = exercice_nom;
 		this.exercice_description = exercice_description;
 		this.exercice_photo = exercice_photo;
+		this.exercice_position = exercice_position;
 		this.muscle_id = muscle_id;
 		this.listEntrainement = listEntrainement;
 	}
+	
+	
 	
 	
 	

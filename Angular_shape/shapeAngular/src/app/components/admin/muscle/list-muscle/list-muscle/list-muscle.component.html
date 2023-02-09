@@ -10,8 +10,6 @@
           <th scope="col">muscle_nom</th>
           <th scope="col">muscle_image</th>
           <th scope="col">utilisateur_id</th>
-          <th scope="col">listMensuration</th>
-          <th scope="col">listExercice</th>
           <th scope="col">ACTION</th>
         </tr>
     </thead>
@@ -21,14 +19,46 @@
         <td>{{item.muscle_nom}}</td>
         <td>{{item.muscle_image}}</td>
         <td>{{item.utilisateur_id}}</td>
-        <td>{{item.listMensuration}}</td>
-        <td>{{item.listExercice}}</td>
 
-        <td><a  routerLink='/editMuscle/{{item.muscle_id}}' class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</a>
+
+        <td><div routerLink='/editMuscle/{{item.muscle_id}}' class="btn btn-warning waves-effect waves-light btn right #e65100 green">Edit</div>
+          <div routerLink='/muscle/{{item.muscle_id}}'class="btn btn-danger waves-effect waves-light btn right #e65100 green">Delete</div>
+
         </td>
-        <td><a routerLink='/muscle/{{item.muscle_id}}'
-                class="btn btn-danger waves-effect waves-light btn right #e65100 green">Delete</a></td>
+
     </tr>
+</tbody>
+
+</table>
+
+<table id="table_mensuration" class="table " >
+  <thead>
+    <tr>
+      <th >Nom du muscle</th>
+      <th >Liste des mensurations</th>
+    </tr>
+  </thead>
+
+<tbody>
+<tr *ngFor="let item of muscles">
+    <th scope="row"> {{item.muscle_id}}</th>
+    <td>{{item.muscle_nom}} <br></td>
+    <td>
+      <ul>
+
+    <ng-container *ngFor="let mensuration of mensurations">
+      <ng-container *ngIf="item.muscle_id==mensuration.muscle_id">
+      <td>
+        <ul>
+            {{mensuration.mensuration_date}} <br>{{mensuration.mensuration_valeur}} cm
+        </ul>
+      </td>
+    </ng-container>
+    </ng-container>
+
+</ul>
+
+</tr>
 </tbody>
 
 </table>
