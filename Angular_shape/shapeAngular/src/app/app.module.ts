@@ -36,6 +36,7 @@ import { MensurationDataComponent } from './components/user/mensuration-data/men
 import { ListMensurationDataComponent } from './components/user/mensuration-data/list-mensuration-data/list-mensuration-data.component';
 import { EditMensurationDataComponent } from './components/user/mensuration-data/edit-mensuration-data/edit-mensuration-data.component';
 import { AddMensurationDataComponent } from './components/user/mensuration-data/add-mensuration-data/add-mensuration-data.component';
+import { LoginComponent } from './components/user/login/login/login.component';
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import { AddMensurationDataComponent } from './components/user/mensuration-data/
     ListMensurationDataComponent,
     EditMensurationDataComponent,
     AddMensurationDataComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

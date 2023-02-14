@@ -1,3 +1,5 @@
+import { Gallerie } from './../../../models/gallerie/gallerie';
+import { GallerieService } from './../../../services/gallerie/gallerie.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FileUploadServiceService } from './../../../services/fileUploadService/file-upload-service.service';
@@ -10,15 +12,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadFileComponent implements OnInit{
 
-  file!: File ;
+  file!: File ; // valeur defini qui ne peut pas etre nul
+
   fileDetails!: any;
-  fileUris: Array<string> = [];
+  fileUris: Array<string> = []; // stock les urls des images
   declare form : FormGroup;
+  declare gallerie : any [];
 
   constructor(
     private fileUploadService: FileUploadServiceService,
     private router: Router,
-    private formBuilder : FormBuilder
+    private formBuilder : FormBuilder,
+    private gallerieService : GallerieService
     ) {
 
     }
@@ -26,12 +31,12 @@ export class UploadFileComponent implements OnInit{
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       gallerie_id:  ['', Validators.required],
-	    gallerie_filename:  ['', Validators.required],
-	    data :  [[], Validators.required],
-	    gallerie_date:  ['2023-02-04', Validators.required],
+	    galleriefilename:  ['', Validators.required],
+      gallerie_date:[new Date(), Validators.required],
 	    utilisateur_id :  ['1', Validators.required],
 
     })
+    this.getGalleries();
 
   }
 
@@ -40,7 +45,7 @@ export class UploadFileComponent implements OnInit{
   }
 
   uploadFile() {
-    this.form.value.gallerie_filename =  this.file.name
+    this.form.value.galleriefilename =  this.file.name
     this.fileUploadService.upload(this.form.value).subscribe({
       next: (data) => {
         console.log("Data : "+data);
@@ -57,21 +62,26 @@ export class UploadFileComponent implements OnInit{
         this.fileDetails = data;
         this.fileUris.push(this.fileDetails.fileUri);
         alert("File Uploaded Successfully")
+        location.reload();
       },
       error: (e) => {
         console.log(e);
       }
     })
 
-    this.fileUploadService
-
-
-
-
-
-
   }
+  getGalleries() {
+    return this.gallerieService.findAllGalleries().subscribe(
+      (data=>{
+
+        this.gallerie = data as any [];
 
 
+
+      }
+        )
+
+    )
+  }
 
 }

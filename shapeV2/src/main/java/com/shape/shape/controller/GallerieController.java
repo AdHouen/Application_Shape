@@ -81,6 +81,23 @@ public class GallerieController {
 	
 	}
 	
+//	@GetMapping("/galleries/nom/{nom}")
+//	public ResponseEntity findGallerieByGalerieFilename(@PathVariable(name = "nom") String gallerie_filename) {
+//		if (gallerie_filename == null) {
+//			return ResponseEntity.badRequest().body("not found gallerie by ID");
+//		}
+//
+//		Gallerie gallerie = gallerieDao.getGallerieByGallerieFilename(gallerie_filename);
+//
+//		if (gallerie == null) {
+//			return ResponseEntity.notFound().build();
+//		}
+//
+//		return ResponseEntity.ok().body(gallerie);
+//
+//	}
+	
+	
 	
 	
 

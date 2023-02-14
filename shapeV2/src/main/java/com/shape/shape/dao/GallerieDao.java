@@ -47,5 +47,8 @@ public class GallerieDao {
 		
 	}
 	
+//	public  Gallerie getGallerieByGallerieFilename(String gallerie_filename) {
+//		return gallerieRepository.findByGalleriefilename(gallerie_filename);
+//	}
  
 }

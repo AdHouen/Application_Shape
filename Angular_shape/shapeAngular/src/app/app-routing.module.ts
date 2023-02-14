@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/user/login/login/login.component';
 import { ListMensurationDataComponent } from './components/user/mensuration-data/list-mensuration-data/list-mensuration-data.component';
 import { AddMensurationDataComponent } from './components/user/mensuration-data/add-mensuration-data/add-mensuration-data.component';
 import { EditMensurationDataComponent } from './components/user/mensuration-data/edit-mensuration-data/edit-mensuration-data.component';
@@ -123,6 +124,19 @@ const routes: Routes = [
     component:AccueilComponent
 
   },
+  {
+    path: '',
+    component:AccueilComponent
+
+  },
+
+  // LOGIN
+  {
+    path: 'login',
+    component:LoginComponent
+
+  },
+
 
    // BMI
    {

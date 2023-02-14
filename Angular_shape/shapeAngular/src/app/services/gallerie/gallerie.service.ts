@@ -8,7 +8,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GallerieService {
-  
 
   httpOptions = {
     headers : new HttpHeaders ({'Content-Type' :'application/json'})
@@ -38,4 +37,8 @@ export class GallerieService {
     return this.http.delete(AppSettings.APP_URL+'/galleries/'+id)
 
   }
+
+  // findGallerieByName(name : string  ) {
+  //   return this.http.get(AppSettings.APP_URL+'/galleries/nom/'+name)
+  // }
 }

@@ -2,14 +2,12 @@ package com.shape.shape.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -21,11 +19,8 @@ public class Gallerie implements Serializable {
 	@Column(name = "GALLERIE_ID")
 	private Long gallerie_id;
 	
-	@Column(name = "GALLERIE_FILENAME")
-	private String gallerie_filename;
-	@Lob
-	@Column(name = "data")
-	private byte[] data;
+	@Column(name = "GALLERIEFILENAME")
+	private String galleriefilename;
 	@Column(name = "GALLERIE_DATE")
 	private LocalDate gallerie_date;
 	@Column(name = "UTILISATEUR_ID")
@@ -37,11 +32,8 @@ public class Gallerie implements Serializable {
 		return gallerie_id;
 	}
 
-	public String getGallerie_filename() {
-		return gallerie_filename;
-	}
-	public byte[] getData() {
-		return data;
+	public String getGalleriefilename() {
+		return galleriefilename;
 	}
 
 	public LocalDate getGallerie_date() { 
@@ -59,11 +51,8 @@ public class Gallerie implements Serializable {
 		this.gallerie_id = gallerie_id;
 	}
 
-	public void setGallerie_filename(String gallerie_filename) {
-		this.gallerie_filename = gallerie_filename;
-	}
-	public void setData(byte[] data) {
-		this.data = data;
+	public void setGalleriefilename(String galleriefilename) {
+		this.galleriefilename = galleriefilename;
 	}
 
 	public void setGallerie_date(LocalDate gallerie_date) {
@@ -81,11 +70,10 @@ public class Gallerie implements Serializable {
 		super();
 	}
 
-	public Gallerie(Long gallerie_id, String gallerie_filename, byte[] data, LocalDate gallerie_date, Long utilisateur_id) {
+	public Gallerie(Long gallerie_id, String galleriefilename, LocalDate gallerie_date, Long utilisateur_id) {
 		super();
 		this.gallerie_id = gallerie_id;
-		this.gallerie_filename = gallerie_filename;
-		this.data = data;
+		this.galleriefilename = galleriefilename;
 		this.gallerie_date = gallerie_date;
 		this.utilisateur_id = utilisateur_id;
 	}

@@ -11,6 +11,21 @@
       </div>
   </div>
 </div>
-<app-list-gallerie></app-list-gallerie>
+<!-- <app-list-gallerie></app-list-gallerie> -->
 
+<h1>Gallerie Photo</h1>
+<br>
+<table id="table_id" class="table " >
+    <tbody>
+      <div class="responsive " *ngFor="let g of gallerie " >
+        <div class="gallery  "  *ngIf="g.utilisateur_id == 1"  >
+          <div class="image">
+            <img class=img-responsive  src="http://localhost:8087/image/{{g.galleriefilename}}" >
+          </div>
+
+          <div class="desc">{{g.gallerie_date}} </div>
+        </div>
+      </div>
+
+</tbody>
 
