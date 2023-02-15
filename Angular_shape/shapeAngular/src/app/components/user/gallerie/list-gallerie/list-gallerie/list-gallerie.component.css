@@ -2,9 +2,9 @@
 
 div.gallery {
   margin: 0rem 0.1rem;
-
   border: 1px solid #ccc;
   text-align: center;
+
 }
 
 div.gallery:hover {
@@ -13,7 +13,7 @@ div.gallery:hover {
 }
 
 div.gallery .image {
-  height: 12rem;
+  height: 10rem;
   width: 100%;
   margin: auto;
 }
@@ -21,6 +21,7 @@ div.gallery .image {
 div.gallery img {
   max-width: 100%;
   max-height: 100%;
+ 
 }
 
 div.desc {
