@@ -41,7 +41,7 @@
 
 <tbody>
 <tr *ngFor="let item of muscles">
-    <th scope="row"> {{item.muscle_id}}</th>
+    <td >{{item.muscle_nom}} </td>
     <td>{{item.muscle_nom}} <br></td>
     <td>
       <ul>
@@ -61,5 +61,25 @@
 </tr>
 </tbody>
 
-</table>
 
+
+
+</table>
+<table id="table_id" class="table ">
+  <thead>
+      <tr>
+        <th >Date</th>
+        <th >Valeur</th>
+      </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let item of muscles">
+  <tr *ngFor="let mensuration of mensurations">
+    <ng-container *ngIf="item.muscle_id==mensuration.muscle_id">
+      <td> {{mensuration.mensuration_date}}</td>
+      <td>{{mensuration.mensuration_valeur}} cm</td>
+    </ng-container>
+  </tr>
+</ng-container>
+</tbody>
+</table>

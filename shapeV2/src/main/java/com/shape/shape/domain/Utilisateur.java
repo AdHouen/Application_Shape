@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -48,12 +49,7 @@ public class Utilisateur implements Serializable{
 		//Avec Muscle
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "utilisateur_id")
     private List<Muscle> listMuscle= new ArrayList<>();
-	
 		
-	
-		
-	
-	
 	// GETTER 
 	public Long getUtilisateur_id() {
 		return utilisateur_id;
@@ -126,6 +122,7 @@ public class Utilisateur implements Serializable{
 	public void setListMuscle(List<Muscle> listMuscle) {
 		this.listMuscle = listMuscle;
 	}
+
 	
 	
 	// CONSTRUCTEUR 
@@ -133,11 +130,10 @@ public class Utilisateur implements Serializable{
 	public Utilisateur() {
 		super();
 	}
-	
 	public Utilisateur(Long utilisateur_id, String utilisateur_nom, String utilisateur_prenom,
 			String utilisateur_pseudo, String utilisateur_email, String utilisateur_password, String utilisateur_photo,
 			String utilisateur_genre, LocalDate utilisateur_dateSouscriptionFin, List<Gallerie> listGallerie,
-			List<Muscle> listMuscle) {
+			List<Muscle> listMuscle){
 		super();
 		this.utilisateur_id = utilisateur_id;
 		this.utilisateur_nom = utilisateur_nom;
@@ -150,8 +146,10 @@ public class Utilisateur implements Serializable{
 		this.utilisateur_dateSouscriptionFin = utilisateur_dateSouscriptionFin;
 		this.listGallerie = listGallerie;
 		this.listMuscle = listMuscle;
-		
 	}
+	
+	
+	
 	
 	
 	

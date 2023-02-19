@@ -1,3 +1,6 @@
+import { AddPlanningComponent } from './components/user/planning/add-planning/add-planning.component';
+import { EditPlanningComponent } from './components/user/planning/edit-planning/edit-planning.component';
+import { ListPlanningComponent } from './components/user/planning/list-planning/list-planning.component';
 import { LoginComponent } from './components/user/login/login/login.component';
 import { ListMensurationDataComponent } from './components/user/mensuration-data/list-mensuration-data/list-mensuration-data.component';
 import { AddMensurationDataComponent } from './components/user/mensuration-data/add-mensuration-data/add-mensuration-data.component';
@@ -110,6 +113,19 @@ const routes: Routes = [
     path : 'planning',
     component: PlanningComponent
   },
+  {
+    path : 'addPlanning',
+    component: AddPlanningComponent
+  },
+  {
+    path : 'planning/:id',
+    component: ListPlanningComponent
+  },
+  {
+    path : 'editPlanning/:id',
+    component: EditPlanningComponent
+  },
+
 
   // GALLERIE
   {

@@ -1,3 +1,4 @@
+import { SemaineService } from './../../../../services/semaine/semaine.service';
 import { EntrainementService } from './../../../../services/entrainement/entrainement.service';
 import { ExerciceService } from './../../../../services/exercice/exercice.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,15 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-planning.component.css']
 })
 export class ListPlanningComponent implements OnInit {
-
-  declare muscles : any;
-  declare exercices : any;
   declare entrainements : any;
+  declare semaines : any;
 
   constructor(
-    private muscleService : MuscleService,
-    private exerciceService : ExerciceService,
     private entrainementService : EntrainementService,
+    private semaineService : SemaineService,
     private router : Router,
     private route : ActivatedRoute
   ){
@@ -26,30 +24,6 @@ export class ListPlanningComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.muscleService.findAllMuscles().subscribe(
-      data => {
-        console.log(data);
-        this.muscles = data;
-
-      }
-    );
-    if (this.route.snapshot.paramMap.get('id') != null) {
-      this.removeMuscle();
-      this.router.navigate(['/planning'])
-    }
-
-    this.exerciceService.findAllExercices().subscribe(
-      data => {
-        console.log(data);
-        this.exercices = data;
-
-      }
-    );
-    if (this.route.snapshot.paramMap.get('id') != null) {
-      this.removeExercice();
-      this.router.navigate(['/planning'])
-    }
-
     this.entrainementService.findAllEntrainements().subscribe(
       data => {
         console.log(data);
@@ -59,8 +33,18 @@ export class ListPlanningComponent implements OnInit {
     );
     if (this.route.snapshot.paramMap.get('id') != null) {
       this.removeEntrainement();
-      this.router.navigate(['/entrainement'])
+      this.router.navigate(['/planning'])
     }
+
+    this.semaineService.findAllSemaines().subscribe(
+      data => {
+        console.log(data);
+        this.semaines = data;
+
+      }
+    );
+
+
   }
   removeEntrainement() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -71,23 +55,7 @@ export class ListPlanningComponent implements OnInit {
       }
     )
   }
-  removeExercice() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.exerciceService.deleteExercice(id).subscribe(
-      () => {
 
 
-      }
-    )
-  }
-  removeMuscle() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.muscleService.deleteMuscle(id).subscribe(
-      () => {
-
-
-      }
-    )
-  }
 
 }

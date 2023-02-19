@@ -34,10 +34,6 @@ public class Exercice implements Serializable{
 	private Long muscle_id;
 
 	
-	// ASSOCIATION
-		//Avec Entrainement
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "exercice_id")
-    private List<Entrainement> listEntrainement= new ArrayList<>();
 	
 	// GETTER
 	
@@ -58,9 +54,6 @@ public class Exercice implements Serializable{
 	}
 	public Long getMuscle_id() {
 		return muscle_id;
-	}
-	public List<Entrainement> getListEntrainement() {
-		return listEntrainement;
 	}
 	
 	
@@ -85,9 +78,6 @@ public class Exercice implements Serializable{
 	public void setMuscle_id(Long muscle_id) {
 		this.muscle_id = muscle_id;
 	}
-	public void setListEntrainement(List<Entrainement> listEntrainement) {
-		this.listEntrainement = listEntrainement;
-	}
 	
 	
 	// CONSTRUCTEUR 
@@ -97,7 +87,7 @@ public class Exercice implements Serializable{
 	}
 	
 	public Exercice(Long exercice_id, String exercice_nom, String exercice_description, String exercice_photo,
-			String exercice_position, Long muscle_id, List<Entrainement> listEntrainement) {
+			String exercice_position, Long muscle_id) {
 		super();
 		this.exercice_id = exercice_id;
 		this.exercice_nom = exercice_nom;
@@ -105,7 +95,6 @@ public class Exercice implements Serializable{
 		this.exercice_photo = exercice_photo;
 		this.exercice_position = exercice_position;
 		this.muscle_id = muscle_id;
-		this.listEntrainement = listEntrainement;
 	}
 	
 	

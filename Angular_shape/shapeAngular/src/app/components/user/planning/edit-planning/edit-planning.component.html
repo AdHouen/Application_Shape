@@ -1,1 +1,42 @@
-<p>edit-planning works!</p>
+<br>
+<br>
+<H2 class="text-center">Modifier un entrainement</H2>
+<div class="container border">
+    <form  [formGroup]="editForm" (ngSubmit)="update()">
+        <div class="form-group">
+          <div class="input-field col s16">
+           <label for="idUser">Muscle</label>
+            <input type="text" name="" id="entrainement_muscle" class="form-control" formControlName="entrainement_muscle" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="idUser">Exercice</label>
+             <input type="text" name="" id="entrainement_exo" class="form-control" formControlName="entrainement_exo" data-length="10">
+           </div>
+           <div class="input-field col s16">
+            <label for="idUser">Série</label>
+             <input type="text" name="" id="entrainement_serie" class="form-control" formControlName="entrainement_serie" data-length="10">
+           </div>
+           <div class="input-field col s16">
+            <label for="idUser">Répétition</label>
+             <input type="text" name="" id="entrainement_repetition" class="form-control" formControlName="entrainement_repetition" data-length="10">
+           </div>
+           <div class="input-field col s16">
+            <label for="idUser">Poids</label>
+             <input type="text" name="" id="entrainement_poids" class="form-control" formControlName="entrainement_poids" data-length="10">
+           </div>
+           <div class="input-field col s16">
+            <label for="idUser">Temps</label>
+             <input type="text" name="" id="entrainement_tempsSeconde" class="form-control" formControlName="entrainement_tempsSeconde" data-length="10">
+           </div>
+           <div class="input-field col s16">
+            <label for="idUser">Distance</label>
+             <input type="text" name="" id="entrainement_distance" class="form-control" formControlName="entrainement_distance" data-length="10">
+           </div>
+
+
+          </div>
+          <button class="btn btn-success" type="submit">Soumettre</button>
+    </form>
+    <br>
+</div>
+{{editForm.value | json}}

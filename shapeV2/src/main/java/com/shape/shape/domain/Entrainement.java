@@ -1,7 +1,6 @@
 package com.shape.shape.domain;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,10 +18,10 @@ public class Entrainement implements Serializable {
 	@Column(name = "ENTRAINEMENT_ID")
 	private Long entrainement_id;
 	
-	@Column(name = "ENTRAINEMENT_DATE")
-	private LocalDate entrainement_date;
-	@Column(name = "ENTRAINEMENT_NOM")
-	private String entrainement_nom;
+	@Column(name = "ENTRAINEMENT_MUSCLE")
+	private String entrainement_muscle;
+	@Column(name = "ENTRAINEMENT_EXO")
+	private String entrainement_exo;	
 	@Column(name = "ENTRAINEMENT_SERIE")
 	private Integer entrainement_serie;
 	@Column(name = "ENTRAINEMENT_REPETITION")
@@ -35,19 +34,19 @@ public class Entrainement implements Serializable {
 	private Integer entrainement_tempsSeconde;
 	@Column(name = "ENTRAINEMENT_DISTANCE")
 	private Integer entrainement_distance;
-	@Column(name = "EXERCICE_ID")
-	private Long exercice_id;
+	@Column(name = "SEMAINE_ID")
+	private Long semaine_id;
 	
 	// GETTER 
 	
 	public Long getEntrainement_id() {
 		return entrainement_id;
 	}
-	public LocalDate getEntrainement_date() {
-		return entrainement_date;
+	public String getEntrainement_muscle() {
+		return entrainement_muscle;
 	}
-	public String getEntrainement_nom() {
-		return entrainement_nom;
+	public String getEntrainement_exo() {
+		return entrainement_exo;
 	}
 	public Integer getEntrainement_serie() {
 		return entrainement_serie;
@@ -67,22 +66,21 @@ public class Entrainement implements Serializable {
 	public Integer getEntrainement_distance() {
 		return entrainement_distance;
 	}
-	
-	public Long getExercice_id() {
-		return exercice_id;
+	public Long getSemaine_id() {
+		return semaine_id;
 	}
-	
+
 	
 	// SETTER 
 	
 	public void setEntrainement_id(Long entrainement_id) {
 		this.entrainement_id = entrainement_id;
 	}
-	public void setEntrainement_date(LocalDate entrainement_date) {
-		this.entrainement_date = entrainement_date;
+	public void setEntrainement_muscle(String entrainement_muscle) {
+		this.entrainement_muscle = entrainement_muscle;
 	}
-	public void setEntrainement_nom(String entrainement_nom) {
-		this.entrainement_nom = entrainement_nom;
+	public void setEntrainement_exo(String entrainement_exo) {
+		this.entrainement_exo = entrainement_exo;
 	}
 	public void setEntrainement_serie(Integer entrainement_serie) {
 		this.entrainement_serie = entrainement_serie;
@@ -102,34 +100,41 @@ public class Entrainement implements Serializable {
 	public void setEntrainement_distance(Integer entrainement_distance) {
 		this.entrainement_distance = entrainement_distance;
 	}
-	public void setExercice_id(Long exercice_id) {
-		this.exercice_id = exercice_id;
+	public void setSemaine_id(Long semaine_id) {
+		this.semaine_id = semaine_id;
 	}
-	
-	
+
 	
 	// CONSTRUCTEUR 
 	
 	public Entrainement() {
 		super();
 	}
-	public Entrainement(Long entrainement_id, LocalDate entrainement_date, String entrainement_nom,
-			Integer entrainement_serie, Integer entrainement_repetition, Integer entrainement_poids,
-			Integer entrainement_pause, Integer entrainement_tempsSeconde, Integer entrainement_distance,
-			Long exercice_id) {
+	public Entrainement(Long entrainement_id, String entrainement_muscle,
+			String entrainement_exo, Integer entrainement_serie, Integer entrainement_repetition,
+			Integer entrainement_poids, Integer entrainement_pause, Integer entrainement_tempsSeconde,
+			Integer entrainement_distance, Long semaine_id) {
 		super();
 		this.entrainement_id = entrainement_id;
-		this.entrainement_date = entrainement_date;
-		this.entrainement_nom = entrainement_nom;
+		this.entrainement_muscle = entrainement_muscle;
+		this.entrainement_exo = entrainement_exo;
 		this.entrainement_serie = entrainement_serie;
 		this.entrainement_repetition = entrainement_repetition;
 		this.entrainement_poids = entrainement_poids;
 		this.entrainement_pause = entrainement_pause;
 		this.entrainement_tempsSeconde = entrainement_tempsSeconde;
 		this.entrainement_distance = entrainement_distance;
-		this.exercice_id = exercice_id;
+		this.semaine_id = semaine_id;
 	}
 	
+
+
+
+
+
+	
+	
+
 	
 	
 

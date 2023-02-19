@@ -47,6 +47,42 @@
 
 <!-- Class Timetable Start -->
 <div class="tab-content ">
+
+  <div id="tab-9" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Mensuration pectoraux</H1>
+    <div id="ajouterMensurationData" class="container">
+      <a routerLink="/ajouterMensurationData" class="btn btn-success waves-effect waves-light btn right orange">Ajouter une nouvelle Mensuration</a>
+    </div>
+    <table id="table_id" class="table align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Mesure</th>
+              <th scope="col">Evolution</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+
+            </tr>
+        </thead>  
+        <tbody>
+        <tr *ngFor="let item of mensurations.slice().reverse()">
+            <td *ngIf="item.muscle_id==95">{{item.mensuration_date}}</td>
+            <td *ngIf="item.muscle_id==95">{{item.mensuration_valeur}}</td>
+            <td *ngIf="item.muscle_id==95">A voir</td>
+            <td *ngIf="item.muscle_id==95">
+              <button  type="button" class="btn btn-info btn-sm" routerLink='/editMensurationData/{{item.mensuration_id}}' ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.muscle_id==95">
+              <button class="btn btn-danger btn-sm" routerLink='/mensurationData/{{item.mensuration_id}}'><i class="far fa-trash-alt"></i> Remove</button>
+
+            </td>
+
+
+        </tr>
+    </tbody>
+    </table>
+  </div>
+
 <div id="tab-10" class="tab-pane fade p-0 ">
   <H1 class="text-center">Mensuration pectoraux</H1>
   <div id="ajouterMensurationData" class="container">
@@ -67,11 +103,11 @@
       <tr *ngFor="let item of mensurations.slice().reverse()">
           <td *ngIf="item.muscle_id==99">{{item.mensuration_date}}</td>
           <td *ngIf="item.muscle_id==99">{{item.mensuration_valeur}}</td>
-          <td>A voir</td>
-          <td>
-            <button type="button" class="btn btn-info btn-sm" routerLink='/editMensurationData/{{item.mensuration_id}}' ><i class="fas fa-edit"></i> Edit</button>
+          <td *ngIf="item.muscle_id==99">A voir</td>
+          <td *ngIf="item.muscle_id==99">
+            <button  type="button" class="btn btn-info btn-sm" routerLink='/editMensurationData/{{item.mensuration_id}}' ><i class="fas fa-edit"></i> Edit</button>
           </td>
-          <td>
+          <td *ngIf="item.muscle_id==99">
             <button class="btn btn-danger btn-sm" routerLink='/mensurationData/{{item.mensuration_id}}'><i class="far fa-trash-alt"></i> Remove</button>
 
           </td>
