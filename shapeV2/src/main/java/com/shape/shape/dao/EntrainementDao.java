@@ -51,7 +51,7 @@ public class EntrainementDao {
 
 	
 	
-	// Assocation Entrainement et ExercicePerso
+	
 
 	
  
