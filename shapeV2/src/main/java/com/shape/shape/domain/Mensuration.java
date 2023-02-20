@@ -16,57 +16,81 @@ public class Mensuration implements Serializable {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MENSURATION_ID")
-	private Long mensuration_id;
-	@Column (name ="MENSURATION_DATE")
-	private LocalDate mensuration_date;
-	@Column(name = "MENSURATION_VALEUR") 
-	private String mensuration_valeur;
+	@Column(name = "ID")
+	private Long id;
+	@Column (name ="DATE")
+	private LocalDate date;
+	@Column(name = "VALEUR") 
+	private Integer valeur;
 	@Column(name = "MUSCLE_ID")
 	private Long muscle_id;
 	
 	// GETTER
 	
-	public Long getMensuration_id() {
-		return mensuration_id;
+	public Long getId() {
+		return id;
 	}
-	public LocalDate getMensuration_date() {
-		return mensuration_date;
+
+	public LocalDate getDate() {
+		return date;
 	}
-	public String getMensuration_valeur() {
-		return mensuration_valeur;
-	}
+	
 	public Long getMuscle_id() {
 		return muscle_id;
 	}
+
+	public Integer getValeur() {
+		return valeur;
+	}
+
+
+
 	
 	// SETTER 
 	
-	public void setMensuration_id(Long mensuration_id) {
-		this.mensuration_id = mensuration_id;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public void setMensuration_date(LocalDate mensuration_date) {
-		this.mensuration_date = mensuration_date;
+
+	public void setDate(LocalDate date) {
+		this.date = date;
 	}
-	public void setMensuration_valeur(String mensuration_valeur) {
-		this.mensuration_valeur = mensuration_valeur;
+
+	public void setValeur(Integer valeur) {
+		this.valeur = valeur;
 	}
 	public void setMuscle_id(Long muscle_id) {
 		this.muscle_id = muscle_id;
 	}
+
 	
+
 	// CONSTRUCTEUR 
 	
 	public Mensuration() {
 		super();
 	}
-	public Mensuration(Long mensuration_id, LocalDate mensuration_date, String mensuration_valeur, Long muscle_id) {
+
+	public Mensuration(Long id, LocalDate date, Integer valeur, Long muscle_id) {
 		super();
-		this.mensuration_id = mensuration_id;
-		this.mensuration_date = mensuration_date;
-		this.mensuration_valeur = mensuration_valeur;
+		this.id = id;
+		this.date = date;
+		this.valeur = valeur;
 		this.muscle_id = muscle_id;
 	}
+	
+	
+
+
+
+
+
+
+
+	
+
+
+
 	
 	
 

@@ -27,15 +27,16 @@ export class EditPlanningComponent implements OnInit{
   ngOnInit(): void {
     this.editForm = this.formBuilder.group({
       entrainement_id: ['', Validators.required],
-      entrainement_muscle: ['', Validators.required],
-      entrainement_exo: ['', Validators.required],
-      entrainement_serie: ['', Validators.required],
-      entrainement_repetition: ['', Validators.required],
-      entrainement_poids: ['', Validators.required],
-      entrainement_pause: ['', Validators.required],
-      entrainement_tempsSeconde: ['', Validators.required],
-      entrainement_distance: ['', Validators.required],
-      semaine_id: ['', Validators.required],
+      entrainement_jour: ['', Validators.required],
+      entrainement_muscle: [''],
+      entrainement_exo: [''],
+      entrainement_serie: [''],
+      entrainement_repetition: [''],
+      entrainement_poids: [''],
+      entrainement_recup: [''],
+      entrainement_temps: [''],
+      entrainement_distance: [''],
+      utilisateur_id: ['', Validators.required],
 
     })
     const id = Number(this.route.snapshot.paramMap.get('id'));

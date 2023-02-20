@@ -22,9 +22,9 @@ export class AddMensurationDataComponent implements OnInit{
   ngOnInit(): void {
     this.form = this.formBuilder.group({
 
-      mensuration_id: ['', Validators.required],
-	    mensuration_date: ['', Validators.required],
-	    mensuration_valeur: ['', Validators.required],
+      id: ['', Validators.required],
+	    date: ['', Validators.required],
+	    valeur: ['', Validators.required],
 	    muscle_id: ['', Validators.required],
 
     })

@@ -1,78 +1,35 @@
-<!-- BMI Calculator Section Begin -->
-<section class="bmi-calculator-section spad">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-              <div class="section-title chart-title">
-                  <span>Check ton corps</span>
-                  <h2>Calcul ton IMC</h2>
-              </div>
-              <div class="chart-table">
-                  <table>
-                      <thead>
-                          <tr>
-                              <th>IMC</th>
-                              <th>Poids catégorie</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td class="point">Below 18.5</td>
-                              <td>Poids insuffisant</td>
-                          </tr>
-                          <tr>
-                              <td class="point">18.5 - 24.9</td>
-                              <td>En bonne santé</td>
-                          </tr>
-                          <tr>
-                              <td class="point">25.0 - 29.9</td>
-                              <td>Excès de poids</td>
-                          </tr>
-                          <tr>
-                              <td class="point">30,0 - 34,9</td>
-                              <td>Obésité, classe I</td>
-                          </tr>
-                          <tr>
-                            <td class="point">35,0 - 39,9</td>
-                            <td>Obésité, classe II</td>
-                          </tr>
-                          <tr>
-                            <td class="point">>= 40,0</td>
-                            <td>Obésité, classe III</td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="section-title chart-calculate-title">
-                  <span>IMC</span>
-                  <h2>Qu'est-ce que l'imc ? </h2>
-              </div>
-              <div class="chart-calculate-form">
-                  <p>L'indice de masse corporelle (IMC) est une mesure basée sur deux variantes : la taille et le poids corporel. La formule standard s’applique aux hommes et aux femmes d’âge adulte. La formule est simple : IMC = poids (kg) / taille (m2).</p>
-                  <form action="#">
-                      <div class="row">
-                          <div class="col-sm-6">
-                              <input type="text" placeholder="Taille / cm">
-                          </div>
-                          <div class="col-sm-6">
-                              <input type="text" placeholder="Poids / kg">
-                          </div>
-                          <div class="col-sm-6">
-                              <input type="text" placeholder="Age">
-                          </div>
-                          <div class="col-sm-6">
-                              <input type="text" placeholder="Genre M/F">
-                          </div>
-                          <div class="col-lg-12">
-                              <button type="submit">Calcul</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-<!-- BMI Calculator Section End -->
+<div class=" max-550">
+  <h2>BMI calculator</h2>
+  <p>A <b>BMI calculator</b> I made for a personal project. Enter your height in cm and your weight in kg</p>
+  <form (ngSubmit)="calculateImc()" action="" id="formBMI">
+    <label for="height">Height (cm)</label>
+    <input type="number" max="200" name="height" id="height" placeholder="180"><br><br>
+    <label for="weight">Weight (kg)</label>
+    <input type="number" max="300" name="weight" id="weight" placeholder="74.8"><br><br>
+    <input type="submit" value="Submit" class="button">
+  </form>
+
+  <div>
+    <h4 id="imcData">IMC: </h4>
+    <div id="imcContainer">
+      <div id="IMCbar"></div>
+    </div>
+  </div><br>
+  <h3>What is the body mass index (BMI)?</h3>
+  <p>
+    The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.
+    The BMI calculation divides an adult's weight in kilograms by their height in metres squared.
+  </p>
+  <h3>BMI ranges</h3>
+  <p>
+    If your BMI is:
+    <ul style="text-align:left">
+      <li> below 18.5 – you're in the underweight range </li>
+      <li>between 18.5 and 24.9 – you're in the healthy weight range</li>
+      <li>between 25 and 29.9 – you're in the overweight range</li>
+      <li>between 30 and 39.9 – you're in the obese range</li>
+    </ul>
+    By the way the code is  <a href="https://github.com/reymon359/BMI-calculator">here</a>. And   <a href="https://codepen.io/reymon359/pen/OdXaMN">here</a> you can see it live
+
+
+</div>

@@ -26,9 +26,9 @@ export class EditMensurationDataComponent {
   ngOnInit(): void {
     this.editForm = this.formBuilder.group({
 
-      mensuration_id: ['', Validators.required],
-	    mensuration_date: ['', Validators.required],
-	    mensuration_valeur: ['', Validators.required],
+      id: ['', Validators.required],
+	    date: ['', Validators.required],
+	    valeur: ['', Validators.required],
 	    muscle_id: ['', Validators.required],
 
     })

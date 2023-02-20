@@ -30,11 +30,15 @@ export class MensurationService {
   }
 
   updateMensuration(mensuration:Mensuration){
-    return this.http.put(AppSettings.APP_URL+'/mensurations/'+ mensuration.mensuration_id, JSON.stringify(mensuration),this.httpOptions);
+    return this.http.put(AppSettings.APP_URL+'/mensurations/'+ mensuration.id, JSON.stringify(mensuration),this.httpOptions);
   }
 
   deleteMensuration(id : number){
     return this.http.delete(AppSettings.APP_URL+'/mensurations/'+id)
 
+  }
+
+  findAllMensurationsByDate(){
+    return this.http.get(AppSettings.APP_URL+'/mensurations/date')
   }
 }

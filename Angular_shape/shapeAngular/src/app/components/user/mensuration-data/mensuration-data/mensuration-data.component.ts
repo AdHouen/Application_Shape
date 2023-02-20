@@ -26,10 +26,10 @@ export class MensurationDataComponent implements OnInit{
 
 ngOnInit(): void {
   this.form = this.formBuilder.group({
-    mensuration_id: ['', Validators.required],
-	  mensuration_date: ['', Validators.required],
-	  mensuration_valeur: ['', Validators.required],
-	  muscle_id: ['', Validators.required],
+    id: ['', Validators.required],
+	  date: ['', Validators.required],
+	  valeur: ['', Validators.required],
+	  muscle_id : ['', Validators.required],
 
 
   })
@@ -38,10 +38,11 @@ ngOnInit(): void {
 
 }
   getMensurations() {
-    return this.mensurationService.findAllMensurations().subscribe(
+    return this.mensurationService.findAllMensurationsByDate().subscribe(
       data => {
         console.log(data);
         this.mensurations = data as any[];
+
 
       }
 
@@ -50,7 +51,7 @@ ngOnInit(): void {
   deleteMensuration(id : number){
     return this.mensurationService.deleteMensuration(id).subscribe(
       () => {
-        
+
 
       }
     )

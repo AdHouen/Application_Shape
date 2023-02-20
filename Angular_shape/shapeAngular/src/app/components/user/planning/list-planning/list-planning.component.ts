@@ -1,4 +1,3 @@
-import { SemaineService } from './../../../../services/semaine/semaine.service';
 import { EntrainementService } from './../../../../services/entrainement/entrainement.service';
 import { ExerciceService } from './../../../../services/exercice/exercice.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -16,7 +15,6 @@ export class ListPlanningComponent implements OnInit {
 
   constructor(
     private entrainementService : EntrainementService,
-    private semaineService : SemaineService,
     private router : Router,
     private route : ActivatedRoute
   ){
@@ -33,16 +31,9 @@ export class ListPlanningComponent implements OnInit {
     );
     if (this.route.snapshot.paramMap.get('id') != null) {
       this.removeEntrainement();
-      this.router.navigate(['/planning'])
+      this.router.navigate(['/planning']);
+
     }
-
-    this.semaineService.findAllSemaines().subscribe(
-      data => {
-        console.log(data);
-        this.semaines = data;
-
-      }
-    );
 
 
   }

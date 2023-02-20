@@ -1,4 +1,3 @@
-import { SemaineService } from './../../../../services/semaine/semaine.service';
 import { Router } from '@angular/router';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { EntrainementService } from './../../../../services/entrainement/entrainement.service';
@@ -19,7 +18,6 @@ export class PlanningComponent implements OnInit{
 
   constructor(
     private entrainementService : EntrainementService,
-    private semaineService : SemaineService,
     private router : Router,
     private formBuilder : FormBuilder
 
@@ -29,27 +27,19 @@ export class PlanningComponent implements OnInit{
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       entrainement_id: ['', Validators.required],
+      entrainement_jour: ['', Validators.required],
       entrainement_muscle: ['', Validators.required],
       entrainement_exo: ['', Validators.required],
       entrainement_serie: ['', Validators.required],
       entrainement_repetition: ['', Validators.required],
       entrainement_poids: ['', Validators.required],
-      entrainement_pause: ['', Validators.required],
-      entrainement_tempsSeconde: ['', Validators.required],
+      entrainement_recup: ['', Validators.required],
+      entrainement_temps: ['', Validators.required],
       entrainement_distance: ['', Validators.required],
-      semaine_id: ['', Validators.required],
+      utilisateur_id: ['', Validators.required],
 
     })
     this.getEntrainements();
-
-    this.form = this.formBuilder.group({
-      semaine_id: ['', Validators.required],
-      semaine_jour: ['', Validators.required],
-      listEntrainement: [[], Validators.required],
-
-    })
-    this.getSemaines();
-
 
   }
 
@@ -72,14 +62,4 @@ export class PlanningComponent implements OnInit{
     )
   }
 
-  getSemaines() {
-  return this.semaineService.findAllSemaines().subscribe(
-      data => {
-        console.log(data);
-        this.semaines = data as any[];
-
-      }
-    )
-
-}
 }

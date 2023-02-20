@@ -62,7 +62,7 @@ public class MensurationController {
 			return ResponseEntity.notFound().build();
 			
 		}
-		mensuration.setMensuration_id(mensuration_id);
+		mensuration.setId(mensuration_id);
 		mensurationDao.updateMensuration(mensuration);
 		return ResponseEntity.ok().body(mensuration);
 	}
@@ -80,7 +80,11 @@ public class MensurationController {
 		return ResponseEntity.ok().body(mensuration); 
 	
 	}
-	
+	@GetMapping("/mensurations/date")
+	public List<Mensuration> getAllMensurationsByDate(@Validated @RequestBody(required = false) Mensuration mensuration) {
+		return mensurationDao.getMensurationsByDate();
+		
+	}
 
 }
 

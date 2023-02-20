@@ -5,6 +5,10 @@
     <form  [formGroup]="form" (ngSubmit)="create()">
         <div class="form-group">
           <div class="input-field col s16">
+            <label for="idUser">Jour</label>
+             <input type="text" name="" id="entrainement_jour" class="form-control" formControlName="entrainement_jour" data-length="10">
+           </div>
+          <div class="input-field col s16">
             <label for="idUser">Muscle</label>
              <input type="text" name="" id="entrainement_muscle" class="form-control" formControlName="entrainement_muscle" data-length="10">
            </div>
@@ -26,16 +30,20 @@
             </div>
             <div class="input-field col s16">
              <label for="idUser">Temps</label>
-              <input type="text" name="" id="entrainement_tempsSeconde" class="form-control" formControlName="entrainement_tempsSeconde" data-length="10">
+              <input type="text" name="" id="entrainement_temps" class="form-control" formControlName="entrainement_temps" data-length="10">
             </div>
             <div class="input-field col s16">
              <label for="idUser">Distance</label>
               <input type="text" name="" id="entrainement_distance" class="form-control" formControlName="entrainement_distance" data-length="10">
             </div>
             <div class="input-field col s16">
-              <label for="idUser">Semaine ID</label>
-               <input type="text" name="" id="semaine_id" class="form-control" formControlName="semaine_id" data-length="10">
+              <label for="idUser">Utilisateur</label>
+               <input type="text" name="" id="utilisateur_id" class="form-control" formControlName="utilisateur_id" data-length="10">
              </div>
+
+
+
+
 
           </div>
           <button class="btn btn-success" type="submit">Soumettre</button>

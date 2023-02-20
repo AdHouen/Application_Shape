@@ -12,26 +12,26 @@
   </div>
   <div class="tab-class text-center">
       <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-1" *ngIf="item.semaine_id==1">{{item.semaine_jour}}</a>
+          <li class="nav-item" >
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-1" >Lundi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-2" *ngIf="item.semaine_id==2">{{item.semaine_jour}}</a>
+          <li class="nav-item" >
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-2" >Mardi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-3" *ngIf="item.semaine_id==3">{{item.semaine_jour}}</a>
+          <li class="nav-item" >
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-3" >Mercredi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-4" *ngIf="item.semaine_id==4">{{item.semaine_jour}}</a>
+          <li class="nav-item" >
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-4" >Jeudi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-5" *ngIf="item.semaine_id==5">{{item.semaine_jour}}</a>
+          <li class="nav-item">
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-5" >Vendredi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-6" *ngIf="item.semaine_id==6">{{item.semaine_jour}}</a>
+          <li class="nav-item" >
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-6" >Samedi</a>
           </li>
-          <li class="nav-item" *ngFor="let item of semaines">
-            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-7" *ngIf="item.semaine_id==7">{{item.semaine_jour}}</a>
+          <li class="nav-item">
+            <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-7" >Dimanche</a>
           </li>
       </ul>
   </div>
@@ -59,18 +59,18 @@
         </thead>
         <tbody>
         <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==1">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==1">
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_muscle}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_exo}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_serie}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_repetition}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_poids}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_pause}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_tempsSeconde}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">{{item.entrainement_distance}}</td>
+            <td *ngIf="item.entrainement_jour=='Lundi'">
               <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
             </td>
-            <td *ngIf="item.semaine_id==1">
+            <td *ngIf="item.entrainement_jour=='Lundi'">
               <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
             </td>
         </tr>
@@ -79,7 +79,7 @@
   </div>
 
   <div id="tab-2" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Mardi</H1>
+    <H1 class="text-center">Lundi</H1>
     <table id="table_id" class="table align-middle  table-striped" >
         <thead>
             <tr>
@@ -97,18 +97,18 @@
         </thead>
         <tbody>
         <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==2">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==2">
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_muscle}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_exo}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_serie}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_repetition}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_poids}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_pause}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_tempsSeconde}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">{{item.entrainement_distance}}</td>
+            <td *ngIf="item.entrainement_jour=='Mardi'">
               <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
             </td>
-            <td *ngIf="item.semaine_id==2">
+            <td *ngIf="item.entrainement_jour=='Mardi'">
               <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
             </td>
         </tr>
@@ -117,7 +117,7 @@
   </div>
 
   <div id="tab-3" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Mercredi</H1>
+    <H1 class="text-center">Lundi</H1>
     <table id="table_id" class="table align-middle  table-striped" >
         <thead>
             <tr>
@@ -135,18 +135,18 @@
         </thead>
         <tbody>
         <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==3">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==3">
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_muscle}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_exo}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_serie}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_repetition}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_poids}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_pause}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_tempsSeconde}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">{{item.entrainement_distance}}</td>
+            <td *ngIf="item.entrainement_jour=='Mercredi'">
               <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
             </td>
-            <td *ngIf="item.semaine_id==3">
+            <td *ngIf="item.entrainement_jour=='Mercredi'">
               <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
             </td>
         </tr>
@@ -154,158 +154,6 @@
     </table>
   </div>
 
-  <div id="tab-4" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Jeudi</H1>
-    <table id="table_id" class="table align-middle  table-striped" >
-        <thead>
-            <tr>
-              <th scope="col">Muscle</th>
-              <th scope="col">Exercice</th>
-              <th scope="col">Serie</th>
-              <th scope="col">Répétition</th>
-              <th scope="col">Poids</th>
-              <th scope="col">Pause</th>
-              <th scope="col">Temps</th>
-              <th scope="col">Distance</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==4">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==4">
-              <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
-            </td>
-            <td *ngIf="item.semaine_id==4">
-              <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
-            </td>
-        </tr>
-    </tbody>
-    </table>
-  </div>
-
-  <div id="tab-5" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Vendredi</H1>
-    <table id="table_id" class="table align-middle  table-striped" >
-        <thead>
-            <tr>
-              <th scope="col">Muscle</th>
-              <th scope="col">Exercice</th>
-              <th scope="col">Serie</th>
-              <th scope="col">Répétition</th>
-              <th scope="col">Poids</th>
-              <th scope="col">Pause</th>
-              <th scope="col">Temps</th>
-              <th scope="col">Distance</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==5">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==5">
-              <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
-            </td>
-            <td *ngIf="item.semaine_id==5">
-              <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
-            </td>
-        </tr>
-    </tbody>
-    </table>
-  </div>
-
-  <div id="tab-6" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Samedi</H1>
-    <table id="table_id" class="table align-middle  table-striped" >
-        <thead>
-            <tr>
-              <th scope="col">Muscle</th>
-              <th scope="col">Exercice</th>
-              <th scope="col">Serie</th>
-              <th scope="col">Répétition</th>
-              <th scope="col">Poids</th>
-              <th scope="col">Pause</th>
-              <th scope="col">Temps</th>
-              <th scope="col">Distance</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==6">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==6">
-              <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
-            </td>
-            <td *ngIf="item.semaine_id==6">
-              <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
-            </td>
-        </tr>
-    </tbody>
-    </table>
-  </div>
-
-  <div id="tab-7" class="tab-pane fade p-0 ">
-    <H1 class="text-center">Dimanche</H1>
-    <table id="table_id" class="table align-middle  table-striped" >
-        <thead>
-            <tr>
-              <th scope="col">Muscle</th>
-              <th scope="col">Exercice</th>
-              <th scope="col">Serie</th>
-              <th scope="col">Répétition</th>
-              <th scope="col">Poids</th>
-              <th scope="col">Pause</th>
-              <th scope="col">Temps</th>
-              <th scope="col">Distance</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of entrainements">
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_muscle}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_exo}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_serie}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_repetition}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_poids}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_pause}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_tempsSeconde}}</td>
-            <td *ngIf="item.semaine_id==7">{{item.entrainement_distance}}</td>
-            <td *ngIf="item.semaine_id==7">
-              <button  type="button" class="btn btn-info btn-sm" routerLink='/editPlanning/{{item.entrainement_id}}' ><i class="fas fa-edit"></i> Edit</button>
-            </td>
-            <td *ngIf="item.semaine_id==7">
-              <button class="btn btn-danger btn-sm" routerLink='/planning/{{item.entrainement_id}}'><i class="far fa-trash-alt"></i> Remove</button>
-
-            </td>
-        </tr>
-    </tbody>
-    </table>
-  </div>
 
 
 </div>

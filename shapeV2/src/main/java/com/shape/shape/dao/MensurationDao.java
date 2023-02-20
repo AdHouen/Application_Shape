@@ -45,7 +45,11 @@ public class MensurationDao {
 		return mensurationRepository.save(mensuration);
 		
 	}
-	
+	// Liste de Mensurations by Date
+		public List<Mensuration> getMensurationsByDate() {
+			return mensurationRepository.findAllByOrderByDateDesc();
+			
+		}
  
 }
 

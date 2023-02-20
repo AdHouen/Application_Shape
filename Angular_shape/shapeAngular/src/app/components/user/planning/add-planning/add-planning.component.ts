@@ -22,16 +22,16 @@ export class AddPlanningComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       entrainement_id: ['', Validators.required],
+      entrainement_jour: ['', Validators.required],
       entrainement_muscle: ['', Validators.required],
       entrainement_exo: ['', Validators.required],
       entrainement_serie: ['', Validators.required],
       entrainement_repetition: ['', Validators.required],
       entrainement_poids: ['', Validators.required],
-      entrainement_pause: ['', Validators.required],
-      entrainement_tempsSeconde: ['', Validators.required],
+      entrainement_recup: ['', Validators.required],
+      entrainement_temps: ['', Validators.required],
       entrainement_distance: ['', Validators.required],
-      semaine_id: ['', Validators.required],
-
+      utilisateur_id: ['', Validators.required],
     })
   }
   create(){

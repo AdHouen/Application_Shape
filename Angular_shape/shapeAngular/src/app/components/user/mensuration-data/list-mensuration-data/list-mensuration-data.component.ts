@@ -1,3 +1,4 @@
+import { Mensuration } from './../../../../models/mensuration/mensuration';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MuscleService } from './../../../../services/muscle/muscle.service';
 import { MensurationService } from './../../../../services/mensuration/mensuration.service';
@@ -23,10 +24,9 @@ export class ListMensurationDataComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.mensurationService.findAllMensurations().subscribe(
+    this.mensurationService.findAllMensurationsByDate().subscribe(
       data => {
-        console.log(data);
-        this.mensurations = data;
+        this.mensurations = data as Mensuration[];
 
       }
     );
