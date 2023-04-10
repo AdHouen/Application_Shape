@@ -42,10 +42,7 @@ ngOnInit(): void {
       data => {
         console.log(data);
         this.mensurations = data as any[];
-
-
       }
-
     )
   }
   deleteMensuration(id : number){
